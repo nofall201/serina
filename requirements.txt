@@ -1,4 +1,4 @@
-fastapi
+fastapi[standard]
 uvicorn
 librosa
 numpy
@@ -10,3 +10,4 @@ joblib
 webrtcvad
 scikit-learn
 python-multipart
+
