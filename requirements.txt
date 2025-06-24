@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+librosa
+numpy
+tensorflow
+soundfile
+speechrecognition
+pydub
+joblib
+webrtcvad
+scikit-learn
+python-multipart

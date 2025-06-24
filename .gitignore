@@ -1,0 +1,12 @@
+setup_ffmpeg.py
+# Python cache
+__pycache__/
+*.pyc
+struktur.md
+# (tambahin sesuai kebutuhan)
+spacefile
+bin/ffmpeg
+bin/ffprobe
+
+
+
