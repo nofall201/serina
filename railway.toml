@@ -1,20 +1,14 @@
-# Railway configuration for Serina FastAPI project
-
 [build]
-builder = "NIXPACKS"
-# Install Python dependencies and ffmpeg
-buildCommand = "pip install --upgrade pip && pip install -r requirements.txt && bash setup_ffmpeg.sh"
+builder = "Dockerfile"
 
 [deploy]
-# Start FastAPI server
-startCommand = "uvicorn app.audio:app --host 0.0.0.0 --port $PORT"
-healthcheckPath = "/"
-restartPolicyType = "on_failure"
-restartPolicyMaxRetries = 10
+startCommand = "uvicorn app.audio:app --host 0.0.0.0 --port 8080"
 
 [env]
-# Environment variables for Python runtime
 PYTHONUNBUFFERED = "1"
-PYTHONDONTWRITEBYTECODE = "1"
-PIP_DISABLE_PIP_VERSION_CHECK = "1"
-PIP_DEFAULT_TIMEOUT = "100"
+DEBIAN_FRONTEND = "noninteractive"
+
+[service]
+numReplicas = 1
+healthcheckPath = "/"
+healthcheckTimeout = 120
