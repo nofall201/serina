@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: serina-emotion-api
+    env: docker
+    plan: free
+    autoDeploy: true
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
